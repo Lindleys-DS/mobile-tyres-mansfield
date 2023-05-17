@@ -18,8 +18,15 @@ export interface Props {
 
 const { title, description, index, bgImg, heading, tagline, formOption, mainHeading } = Astro.props;
 
-const city = ""
-const areas = ["Hucknall"]
+const city = "Mansfield"
+const areas = ["Hucknall", "Ilkeston", "Kirkby In Ashfield"]
+
+// Mapping function to generate lowercase links with dashes
+const generateLink = (area) => {
+  const lowercaseArea = area.toLowerCase();
+  const dashedArea = lowercaseArea.replace(/\s+/g, "-"); // Replace spaces with dashes
+  return `/coverage/${dashedArea}`;
+};
 
 ---
 
@@ -44,7 +51,7 @@ const areas = ["Hucknall"]
                 </article>
                 <article>
                     <h2>Areas We Cover</h2>
-                    <p>Our mobile services are available across many areas of {city}, including: {areas.map((area) => <a href={`/coverage/${area}`}>{area}, </a>)}</p>
+                    <p>Our mobile services are available across many areas of {city}, including: { areas.map((area) => <a href={generateLink(area)}>{area}, </a>)} and surrounding areas.</p>
                 </article>
                 <article>
                     <h2>Get A Quote Today</h2>

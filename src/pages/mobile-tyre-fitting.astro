@@ -1,8 +1,8 @@
 ---
 import ServiceLayout from "../layouts/ServiceLayout.astro"
 
-const city = ""
-const areas = [""]
+const city = "Mansfield"
+const areas = ["Hucknall", "Ilkeston", "Kirkby In Ashfield"]
 
 const title = `Mobile Tyre Fitting In ${city}`
 const description = `Change your tyres at home with our mobile tyre fitting service. We cover ${city} and surrounding areas. Call us today for a quote.`
@@ -11,7 +11,7 @@ const bgImg = "url('/img/mobile-tyre-fitting-van.jpg')"
 const heading = "The Easy Way to Change Your Tyres"
 const tagline = "Have your tyres fitted at home or work"
 const formOption = "registration"
-const mainHeading = `Mobile Tyre Fitting In {city}`
+const mainHeading = `Mobile Tyre Fitting In ${city}`
 ---
 
 
@@ -23,5 +23,5 @@ const mainHeading = `Mobile Tyre Fitting In {city}`
     <p>We can also replace tyres that have Tyron bands fitted such as <a href="/mobile-caravan-tyre-fitting">caravan tyres.</a></p>
     <h2>Mobile Tyre Fitting Covering the Whole of {city}</h2>
     <p>With multiple vans in <strong>{city}</strong>, we aim to respond to any <strong>tyre call-outs</strong> within 90 minutes.</p>
-    <p>We cover {areas.map((area) => `${area}, `)}and surrounding areas.</p>
+    <p>We cover {areas.map((area) => <span>{area}, </span>)}and surrounding areas.</p>
 </ServiceLayout>

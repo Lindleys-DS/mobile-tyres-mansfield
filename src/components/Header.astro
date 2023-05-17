@@ -1,20 +1,28 @@
 ---
-const city = ""
-const phoneNo = ""
-const areas = ["Hucknall"]
+const city = "Mansfield"
+const phoneNo = "01623 345 599"
+const areas = ["Hucknall", "Ilkeston", "Kirkby In Ashfield"]
+
+// Mapping function to generate lowercase links with dashes
+const generateLink = (area) => {
+  const lowercaseArea = area.toLowerCase();
+  const dashedArea = lowercaseArea.replace(/\s+/g, "-"); // Replace spaces with dashes
+  return `/coverage/${dashedArea}`;
+};
+
 ---
 <header class="bg-light">
     <div class="container d-flex justify-content-between align-items-center py-5">
-        <a href="/" class="navbar-brand fw-bold fs-2">Mobile Tyres <span class="text-success">{city}</span></a>
+        <a href="/" class="navbar-brand fw-bold fs-2">Mobile Tyres <span class="text-danger">{city}</span></a>
         <div>
             <div class="d-none d-lg-block fs-3 text-end">
                 <p class="mb-0">Call Us Today For A Price</p>
-                <p class="mb-0 fw-bold text-success"><i class="bi bi-telephone-fill"></i> {phoneNo}</p>
+                <p class="mb-0 fw-bold text-danger"><i class="bi bi-telephone-fill"></i> {phoneNo}</p>
             </div>
             <a href=`tel:${phoneNo}` class="btn btn-dark btn-lg d-lg-none"><i class="bi bi-telephone-fill"></i></a>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success fw-bold">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger fw-bold">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
                 <span class="navbar-toggler-icon"></span>
@@ -44,7 +52,7 @@ const areas = ["Hucknall"]
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Coverage</a>
                         <ul class="dropdown-menu">
-                            { areas.map((area) => <a href={`/coverage/${area}`} class="dropdown-item">{area}</a>)}
+                            { areas.map((area) => <a href={generateLink(area)} class="dropdown-item">{area}</a>)}
                         </ul>
                     </li>
                     <li class="nav-item">

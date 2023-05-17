@@ -6,7 +6,9 @@ import CTA from "../../components/CTA.astro"
 
 export async function getStaticPaths() {
     return [
-        {params: {area: "hucknall"}, props: {area: "Hucknall", about: ""}}
+        {params: {area: "hucknall"}, props: {area: "Hucknall", about: "Hucknall is a town located to the north of Nottingham city centre, situated in the Ashfield district of Nottinghamshire. The town has a rich industrial heritage, with coal mining and textile industries playing key roles in its history. Today, Hucknall offers a range of local amenities, including shops, restaurants, and leisure facilities, as well as easy access to nearby green spaces such as Bestwood Country Park and Hucknall Leisure Centre."}},
+        {params: {area: "ilkeston"}, props: {area: "Ilkeston", about: "Ilkeston is a town in Derbyshire, situated about 8 miles west of Nottingham. With a population of around 38,000 people, Ilkeston is the largest town within the Borough of Erewash. The town has a rich industrial history, having been a center for coal mining and lace-making in the past. Today, Ilkeston offers a range of amenities, including several supermarkets, a leisure center, and a variety of shops and restaurants. The town is well-connected to nearby areas via road and rail, with easy access to Nottingham and Derby. Ilkeston is also home to several parks and green spaces, including Victoria Park and Rutland Recreation Ground, making it a popular destination for outdoor activities and leisure."}},
+        {params: {area: "kirkby-in-ashfield"}, props: {area: "Kirkby-In-Ashfield", about: "Kirkby-In-Ashfield is a town located in the Ashfield district of Nottinghamshire, situated to the north of Nottingham city centre. The town offers a mix of residential and commercial areas, with a range of local amenities including shops, cafes, and leisure facilities. Kirkby-In-Ashfield is also close to popular attractions such as Newstead Abbey and the Sherwood Forest Visitor Centre."}},
     ]
 }
 
@@ -15,7 +17,7 @@ const city = "Mansfield"
 ---
 
 <Layout title={`Mobile Tyre Fitting In ${area}`} description={`Have your tyres fitted at home in ${area} with our convenient mobile tyre fitting service. Call us today for a quote.`} index={true}>
-    <Hero heading={`Mobile Tyre Fitting in ${area}`} tagline="We come to you at home, work, or roadside." bgImg="url(/img/mobile-tyre-fitting-van.jpg" formOption="registration"/>
+    <Hero heading={`Mobile Tyre Fitting in ${area}`} tagline="We come to you at home, work, or roadside." bgImg="url(/img/mobile-tyre-fitting-van.jpg)" formOption="registration"/>
     <div class="container py-5">
         <div class="row">
             <div class="col-12 col-lg-8">
@@ -31,7 +33,7 @@ const city = "Mansfield"
                         <p>If you're having trouble starting your vehicle, our <a href="/mobile-battery-replacement">mobile car battery replacement</a> service can help. We offer battery replacement on most makes and models of vehicles in {area}. Additionally, if your vehicle is equipped with <a href="/tyre-pressure-monitoring-systems">TPMS</a>, we can programme and calibrate your new tyre sensors to ensure that they are providing accurate information about your tyre pressures at all times.</p>
                 </main>
                 <article>
-                    <h2>Why Choose Mobile Tyres Nottingham?</h2>
+                    <h2>Why Choose Mobile Tyres {city}?</h2>
                     <ul>
                         <li>Convenient and efficient service that comes to you.</li>
                         <li>Experienced technicians who use state-of-the-art equipment.</li>
