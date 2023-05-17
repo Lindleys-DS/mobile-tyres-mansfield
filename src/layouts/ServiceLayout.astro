@@ -18,8 +18,8 @@ export interface Props {
 
 const { title, description, index, bgImg, heading, tagline, formOption, mainHeading } = Astro.props;
 
-const city = "Mansfield"
-const areas = ["Hucknall", "Ilkeston", "Kirkby In Ashfield", "Sutton In Ashfield", "Worksop"]
+const city = import.meta.env.CITY
+const areas = import.meta.env.AREAS.split(", ")
 
 // Mapping function to generate lowercase links with dashes
 const generateLink = (area) => {

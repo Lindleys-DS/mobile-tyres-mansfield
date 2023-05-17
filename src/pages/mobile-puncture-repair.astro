@@ -1,8 +1,8 @@
 ---
 import ServiceLayout from "../layouts/ServiceLayout.astro"
 
-const city = "Mansfield"
-const phoneNo = "01623345599"
+const city = import.meta.env.CITY
+const phoneNo = import.meta.env.PHONE_NO
 
 const title = `Mobile Puncture Repair In ${city}`
 const description = `If you've got a flat tyre caused by a nail, you can have it fixed with our mobile puncture repair service. We cover ${city} and surrounding areas. Call us today.`

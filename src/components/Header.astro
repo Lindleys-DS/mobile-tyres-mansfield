@@ -1,7 +1,7 @@
 ---
 const city = import.meta.env.CITY
 const phoneNo = import.meta.env.FORMATTED_PHONE_NO
-const areas = ["Hucknall", "Ilkeston", "Kirkby In Ashfield", "Sutton In Ashfield", "Worksop"]
+const areas = import.meta.env.AREAS.split(", ")
 
 // Mapping function to generate lowercase links with dashes
 const generateLink = (area) => {

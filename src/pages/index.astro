@@ -1,5 +1,5 @@
 ---
-const city = "Mansfield"
+const city = import.meta.env.CITY
 
 import Layout from "../layouts/Layout.astro"
 import Hero from "../components/Hero.astro"
@@ -11,7 +11,7 @@ const tagline = "We come to you at home, work or roadside"
 const bgImg = "url(/img/mobile-tyre-fitting-van.jpg)"
 ---
 
-<Layout description=`Do you need new car tyres fitted at home in ${city}? ${city} Mobile Tyres provide a convenient mobile tyre replacement service at your doorstep. Contact us today for a quote.` title={`Home - ${city} Mobile Tyres`} index={true}>
+<Layout description=`Do you need new car tyres fitted at home in ${city}? ${city} Mobile Tyres provide a convenient mobile tyre replacement service at your doorstep. Contact us today for a quote.` title={`Home - Mobile Tyres ${city}`} index={true}>
     <Hero heading={heading} tagline={tagline} formOption="registration" bgImg={bgImg}/>
     <main class="container py-5">
         <h1 class="text-center mb-5">Convenient Mobile Tyre Fitting Services In {city}</h1>
@@ -24,7 +24,7 @@ const bgImg = "url(/img/mobile-tyre-fitting-van.jpg)"
             <div class="col-12 col-md-6">
                 <p>Our mobile tyre fitting service is available throughout <strong>{city}</strong>, and we pride ourselves on our efficient and professional approach.</p>
                 <p>We also stock a wide range of tyres from leading manufacturers, ensuring that we have the right tyres for your vehicle at competitive prices.</p>
-                <p>Contact us today to schedule your mobile tyre fitting appointment, and experience the convenience and quality that {city} Mobile Tyres has to offer.</p>
+                <p>Contact us today to schedule your mobile tyre fitting appointment, and experience the convenience and quality that Mobile Tyres {city} has to offer.</p>
             </div>
         </div>
     </main>

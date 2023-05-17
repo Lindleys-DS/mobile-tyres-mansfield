@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 }
 
 const {area, about} = Astro.props;
-const city = "Mansfield"
+const city = import.meta.env.CITY;
 ---
 
 <Layout title={`Mobile Tyre Fitting In ${area}`} description={`Have your tyres fitted at home in ${area} with our convenient mobile tyre fitting service. Call us today for a quote.`} index={true}>

@@ -10,7 +10,7 @@ export interface Props {
 }
 
 const { heading, tagline, bgImg, formOption = "registration" } = Astro.props;
-const city = "Mansfield"
+const city = import.meta.env.CITY
 ---
 
 <section id="heroSection" class="bg-overlay d-flex align-items-center">
